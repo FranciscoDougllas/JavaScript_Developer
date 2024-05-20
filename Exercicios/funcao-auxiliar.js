@@ -13,9 +13,28 @@ function calculaMedia(notas){
 
     return `A Media das Notas e; ${media.toFixed(2)}`;
 }
-  
+
+
+
+//Maior par e Menor Impar
+function parImpar(numeros){
+    let maiorPar = Infinity;
+    let menorImpar = Infinity;
+
+    for(const numero of numeros){
+        if(numero % 2 === 0){
+            maiorPar = Math.max(maiorPar, numero);
+        }else{
+            menorImpar = Math.min(menorImpar, numero);
+        }
+    }
+    return {
+        maiorPar, menorImpar
+    };
+}
 
 module.exports = {
     calculaMedia,
     print,
+    parImpar,
 }

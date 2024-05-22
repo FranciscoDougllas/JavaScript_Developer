@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais</title>
+</head>
+<body>
+    <script>
+        //Condicionais logicas
+        const num1 = 10;
+        const num2 = 11;
+
+        let soma = num1 + num2;
+
+        if(soma % 2 === 0){
+            if(soma >= 30){
+                console.log('A Soma e Par mais e maior que 30');
+            }
+            else{
+                console.log('A Soma e Par mais nao e maior que 30');
+            }
+        }
+        else if(soma % 2 === 1){
+            if(soma <= 30){
+                console.log('A soma e Impa e Menor que 30')
+            }else{
+                console.log('A soma e Impa mais Nao e menor que 30')
+            }
+        }
+
+        //Condicionais Ternarias
+        let valor = 20;
+        let texto = '';
+        let valor2 = texto == "A" ? 10 : 20;
+        console.log(valor2)
+
+        //switch
+        let variavel = 1;
+        switch(variavel){
+            case 1:
+                console.log('O Numero e ', variavel)
+                break
+            case 2:
+                console.log('O Numero e ', variavel)
+                break
+            case 3:
+                console.log('O Numero e ', variavel)
+                break
+            default:
+                console.log('Numero incorreto')
+        }
+
+
+        //Try catch
+        try {
+        // Código que pode gerar uma exceção
+        const resultado = 10 / 0; // Tentando dividir por zero
+        console.log('Resultado:', resultado);
+        } catch (erro) {
+        // Bloco de código que será executado se ocorrer uma exceção
+        console.error('Ocorreu um erro:', erro.message);
+        }
+
+    </script>
+</body>
+</html>

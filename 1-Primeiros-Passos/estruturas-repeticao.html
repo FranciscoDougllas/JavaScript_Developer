@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de Repetição</title>
+</head>
+<body>
+    <script>
+
+        //Estrutura while
+        let contador = 0;
+
+        while (contador <= 10) {
+        contador++;
+        console.log(`${contador} + ${10} = ${contador + 10}`);
+        }
+
+        //Estrutura for
+        for(let indice = 0; indice <= 10; indice++){
+            console.log(`${indice} + ${1} = ${indice + 1}`)
+        }
+
+        //For of
+        const nomes = ['ABC', 'EDF', 'DDDD', 'dkdkdk'];
+        for (const nome of nomes){
+            console.log(nome);
+        }
+
+        //for in
+        const person = {
+            name: 'Francisc',
+            age: 29,
+        }
+        for(const prop in person){
+            console.log(`Prop: ${person[prop]}`);
+        }
+
+    </script>
+</body>
+</html>

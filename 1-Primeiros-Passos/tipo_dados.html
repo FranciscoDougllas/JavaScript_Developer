@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Dados</title>
+</head>
+<body>
+    <h1>Tipos de Dados em JS, utilize o console do navegador</h1>
+    <script>
+        //Tipo String, tudo que estive entre aspas
+        console.log(typeof ('a', "44", "true"));
+
+        //Tipo Numerico
+        console.log(typeof 2, 2);
+        console.log(typeof 12.34 ,12.34);
+        console.log(typeof parseInt('45'), parseInt('45')); //Aqui fiz a conversão 
+
+        //Booleano
+        a = true;
+        b = false;
+        console.log(a, typeof a);
+        console.log(b, typeof b);
+
+        //Infinity
+        console.log(Infinity);
+        console.log(1 / 0);
+        console.log(typeof Infinity);
+
+        //NAN
+        console.log(NaN); //Not a Number
+        console.log("A" / 2);
+        console.log(typeof NaN);
+
+        //Null e Undefined
+        console.log('Valores Nulos', null);
+        console.log('Valor indefinido', undefined);
+        console.log(typeof null);
+        console.log(typeof undefined);
+
+
+        //Object
+        console.log({propriedade: "Valor"}); //Isso e um objeto
+        const pessoa = {propriedade: "Teste"};
+        console.log(pessoa, typeof pessoa)
+
+        console.log({
+            nome: 'Francisco',
+            idade: 29,
+            endereco: {
+                rua: 'Sem Medo',
+                bairro: 'Terror noturno',
+                numero: '0000',
+            }
+        })
+
+        //Arrays
+        console.log([1, 2, 3, 4, 6, 7, 'ddd', true, false, typeof 44]);
+
+        //Date
+        console.log(Date()); //Data e hora corrent new date
+        console.log(new Date()); //Data e hora corrent
+        console.log(new Date(2024, 5, 21));
+        
+    </script>
+    
+</body>
+</html>

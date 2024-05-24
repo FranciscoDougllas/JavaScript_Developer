@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <button>Recuperar dados</button>
+    <br>
+    <br>
+    <script>
+        const loadData = () =>{
+            const xhr = new XMLHttpRequest();
+
+            xhr.apen("GET", "https://api.github.com/users/")
+            xhr.send(null)
+            xhr.onreadystatechange = () =>{
+                if (xhr.readyState === 4){
+                    
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

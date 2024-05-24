@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcoes</title>
+</head>
+<body>
+    <script>
+            function sayHello(nome, sobrenome){
+                console.log(`Ola bom dia ${nome} ${sobrenome}`);
+            }
+            const nome = 'Francisco';
+            const sobrenome = 'Douglas';
+            sayHello(nome, sobrenome);
+
+            //Funcao com Retorno
+            function sum(n1, n2){
+                return n1 + n2;
+            }
+            const n1 = 4;
+            const n2 = 7;
+            console.log(sum(n1, n2));
+
+            //Objetos Argumentos
+            function sum2(n1, n2){
+                let res = 0;
+                for (const n of arguments){
+                    res += n;
+                   
+                }
+                return res
+            }
+            const numeros = [1, 4, 7, 1, 3, 6];
+            console.log(sum2(4,5, 6))
+
+
+            //Valor vs referencia
+            function mult(n){
+                n *= n;
+                return n
+            }
+
+            let numVal = 10;
+            console.log(mult(numVal));
+
+            //Valor vs referencia 2
+            function multObj(obj){
+                obj.value *= obj.value;
+                return obj
+            }
+            const numObj = {value: 10}
+            console.log(multObj(numObj))
+
+
+            //Escopo de Funcoes
+            let mult = function(n){
+                n *= n;
+                return n
+            }
+            const num23 = 5;
+            console.log(mult(num23))
+
+            //Callbacks
+            function calcMult(values, func){
+                for(let i=0; i < values.length; i++){
+                    values[i] = func(values[i])
+                }
+                return values
+            }
+
+            const values = [1, 4, 5, 67, 7];
+            console.log(calcMult(values, func))
+    </script>
+</body>
+</html>

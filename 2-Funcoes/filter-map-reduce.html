@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>filter, map, reduce</h2>
+
+    <script>
+        //Filter
+        const numbers = [10, 5, 6, 7, 34, 56, 11];
+    
+        const gt10 = function(item){
+            return item > 10;
+        }
+
+        let res = numbers.filter((n) => n > 10)
+        console.log(res)
+
+        const people = [
+            {name: "Felipe", age: 40},
+            {name: "Tiago", age: 10},
+            {name: 'Rico', age: 25},
+        ]
+        const m = people.filter((p) => p.age >= 18)
+        console.log(m)
+
+        //FUncao map
+        const double = numbers.map((n) => n*2)
+        console.log(double);
+
+        //Reduce
+        const soma = euros.reduce((total, quantidade) => total + quantidade);
+        console.log(soma); // Resultado: 118.11
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While</title>
+</head>
+<body>
+    <h1>Do while</h1>
+    <script>
+        // Exemplo do...while
+        let contador = prompt(parseInt('Digite um numero: '));
+        do {
+            console.log(contador);
+            contador++;
+        } while (contador < 10);
+
+
+        // Exemplo do...while
+        let i = 0;
+        while (i < 6) {
+            if (i === 3) {
+                break;
+            }
+            console.log(i);
+            i++;
+        }
+
+
+        let j = 0;
+        while (j < 6) {
+            j++;
+            if (j === 3) {
+                continue;
+            }
+            console.log(j);
+        }
+
+
+
+    </script>
+</body>
+</html>

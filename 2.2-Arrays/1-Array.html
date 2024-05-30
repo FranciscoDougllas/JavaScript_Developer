@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        //Primeira Forma de Cria um Array
+        let array1 = ['Maria', 'Joana','Paula', 'Larissa'];
+
+        console.log(array1[1])
+        console.log(array1[2])
+        console.log(array1[3])
+        console.log(array1[4])
+        console.log(array1[5])
+        console.log(array1[-1])
+
+        for(let i=1; i<array1.length; i++){
+            console.log(`Nome ${i} ${array1[i]}`);
+        }
+
+        //Segunda Forma
+        let array2 = Array('Maria', 'Joana','Paula', 'Larissa')
+
+        //Terceira forma de cria um Array
+        let array3 = new Array('Maria', 'Joana','Paula', 'Larissa')
+    </script>
+</body>
+</html>

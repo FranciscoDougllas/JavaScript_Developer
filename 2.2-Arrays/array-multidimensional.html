@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const pessoas = [
+            ["Ana", 60, 1.65],
+            ["Carlos", 75, 1.80],
+            ["Maria", 55, 1.70],
+        ];
+
+        console.table(pessoas);
+
+        //Desafio
+        function geraRelatorio(array){
+            let aprovados = 0;
+            let reprovados = 0;
+            for (const nota of array){
+                if(nota >= 7){
+                    aprovados += 1;
+                }else{
+                    reprovados += 1
+                }
+            }
+            return `Aprovados ${aprovados} Reprovados ${reprovados}`
+        }
+        console.log(geraRelatorio(5, 10, 8, 7, 2, 4));
+
+    </script>
+</body>
+</html>

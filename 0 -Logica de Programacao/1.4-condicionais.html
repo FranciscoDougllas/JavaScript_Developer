@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais</title>
+</head>
+<body>
+    <script>
+        let n1 = parseFloat(prompt('Primeira nota: '))
+        let n2 = parseFloat(prompt('Segunda Nota: '))
+
+        let media = (n1 + n2)/2
+
+        if(media <= 5){
+            alert('Reprovado')
+        }else if(media > 5 && media < 6.9){
+            alert('Recuperação')
+        }else{
+            alert('Aprovado')
+        }
+
+        //switch case
+        let n = parseInt(prompt('Digite um numero: '))
+
+        switch(n){
+            case 1: 
+            alert('Domingo')
+            break
+
+            case 2:
+            alert('Segunda')
+            break
+
+            case 3:
+            alert('Terça')
+            break
+
+            case 4:
+            alert('Quarta')
+            break
+
+            case 5:
+            alert('Quinta')
+            break
+
+            case 6: 
+            alert('Sexta')
+            break
+
+            case 7: 
+            alert('Sabado')
+            break
+
+            default:
+                alert('Numero invalido')
+        }
+
+    </script>
+</body>
+</html>

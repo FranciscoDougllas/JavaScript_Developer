@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução</title>
+
+    <style>
+        * {
+            margin: 10px auto;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            background-color: #333;
+            width: 450px;
+            margin: 10px;
+            font-size: 2rem;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Tabuada Simples</p>
+        <script>
+            let num1 = parseInt(prompt('Digite um Numero: '));
+
+            //alert(`A Soma dos Numeros e ${soma}`);
+            for(let i=1; i<=10; i++){
+                document.write(`${num1} x ${i} = ${num1 * i}<br>`);
+            }
+            document.write(`A Soma dos Numeros e ${soma}`);
+        </script>
+    </div>
+
+    <div class="container">
+        <p>Tabuada Simples</p>
+        <script>
+            let num2 = parseInt(prompt('Digite um Numero: '));
+
+            //alert(`A Soma dos Numeros e ${soma}`);
+            for(let i=1; i<=10; i++){
+                document.write(`${num2} x ${i} = ${num2 * i}<br>`);
+            }
+            document.write(`A Soma dos Numeros e ${soma}`);
+            document.close()
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .container {
+            width: 300px;
+            height: 300px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Mude a Cor do texto</h1>
+
+    <div class="container">
+        Mude o Tamanho
+    </div>
+
+    <script>
+        let container = document.querySelector('.container');
+
+        container.addEventListener('click', function() {
+            container.style.width = '500px';
+            container.style.height = '500px';
+        });
+    </script>
+</body>
+</html>

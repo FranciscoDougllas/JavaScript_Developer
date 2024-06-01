@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+</head>
+<body>
+    <script>
+        let inicio = 1004;
+
+        while(inicio <= 2024){
+            inicio += 4;
+            if((inicio % 4 === 0) && (inicio % 100!== 0 || inicio % 400 === 0)){
+                document.write(`${inicio} é Bissexto<br>`);
+            } else {
+                document.write(`${inicio} não é Bissexto<br>`);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+</head>
+<body>
+    <script>
+        let n = parseFloat(prompt('Digite um numero: '));
+
+        let contador = 0;
+        while(true){
+            contador += 1
+            document.write(`${n} + ${contador} = ${n+contador}<br>`);
+            if(contador === 30){
+                break
+            }
+        }
+
+        //Mais while
+        let n2 = 100;
+
+        while(n2 >= 0){
+            n2 -= 1;
+            document.write(`${n2}<br>`);
+
+        }
+
+        //Desafio
+        let n3 = parseFloat(prompt('Digite um numero: '));
+
+        if(num != NaN){
+            document.write(`O Numero ${n3} e valido`);
+            let cont = 0;
+            while(cont <= 10){
+                cont += 1;
+                document.write(`${n3} x ${cont} = ${n3*cont} <br>`)
+                if(cont == 10){
+                    break
+                }
+            }
+        }
+    </script>
+</body>2
+</html>

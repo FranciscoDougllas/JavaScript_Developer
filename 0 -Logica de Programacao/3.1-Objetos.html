@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+    <script>
+        const caneta = {
+            nome: 'Bik',
+            preco: 2,
+            quantidade: 5,
+            cor: 'Preta',
+            estilo: 'Bico Fino'
+        }
+
+        document.write(`Caneta ${caneta.nome} custa ${caneta.preco} temos ${caneta.quantidade} unidades do estilo ${caneta.estilo}`)
+
+        document.write('<br><hr><br>')
+        
+
+        const endereco = {
+            rua: 'Rua das Flores',
+            numero: 123,
+            bairro: 'Centro',
+            cidade: 'São Paulo',
+            estado: 'SP',
+            cep: '12345-678'
+        }
+
+        const pessoa = {
+            nome: 'João',
+            idade: 25,
+            sexo: 'Masculino',
+            altura: 1.75,
+            peso: 70,
+            endereco: endereco
+        }
+
+        console.log(pessoa.endereco.rua)
+       
+
+
+    </script>
+</body>
+</html>

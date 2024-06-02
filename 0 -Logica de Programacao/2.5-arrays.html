@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <script>
+        const names = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace"];
+        document.write(typeof names + '<br>')
+
+        for(let i=1; i <= names.length; i++){
+            document.write(`Nome ${i} ${names[i]} <br>`)
+        }
+
+        //Array literal = []
+        //Array construtor = new Array()
+
+        document.write('<br><hr><br>')
+        let numeros = [4, 6, 7, 12, 4, 7, 8, 10]
+
+        for(let i = 0; i <= numeros.length; i ++ ){
+            document.write(`Número ${numeros[i]*2} <br>`)
+        }
+
+        document.write('<br><hr><br>')
+        document.write('Desafio dias da Semana<br>')
+
+        const diaSemana = ['Domingo','Segunda', 'Terça', 'Quarta', 
+            'Quinta','Sexta','Sabado']
+        for(let i = 0; i <= diaSemana.length; i++){
+            document.write(`Dia ${i+1} - ${diaSemana[i]} <br>`)
+        }
+        const hoje = new Date()
+        document.write(`Dia atual semana ${hoje.getDay()}`)
+        
+
+        document.write('<br><hr><br>')
+        document.write('Desafio Nomes inversos<br>')
+
+        const Semana = ['Domingo','Segunda', 'Terça', 'Quarta', 
+            'Quinta','Sexta','Sabado']
+
+        for(let i= Semana.length -1; i >= 0; i --){
+            document.write(`Dia ${i-1} - ${diaSemana[i]} <br>`)
+        }
+    </script>
+</body>
+</html>

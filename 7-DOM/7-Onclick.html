@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+</head>
+<body>
+    <h1>Teste</h1>
+    <button type="button" onclick="saudacao()">Olá FrontEnd</button>
+
+    <button onclick="mostraCaixa()">Mostra Caixa</button>
+
+    <div id="caixa"></div>
+
+    <script>
+        function saudacao(){
+            alert('Olá FrontEnd');
+        }
+
+        function mostraCaixa(){
+            const caixa = document.getElementById('caixa');
+            caixa.style.display = 'block';
+            caixa.style.width = '200px';
+
+            caixa.innerHTML;
+        }
+    </script>
+</body>
+</html>

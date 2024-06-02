@@ -6,22 +6,31 @@
     <title>AJAX</title>
 </head>
 <body>
-    <button>Recuperar dados</button>
+    <button id="loadButton">Recuperar dados</button>
     <br>
     <br>
+    <div id="userData"></div>
     <script>
-        const loadData = () =>{
+        document.getElementById('loadButton').addEventListener('click', loadData);
+
+        function loadData() {
             const xhr = new XMLHttpRequest();
 
-            xhr.apen("GET", "https://api.github.com/users/")
-            xhr.send(null)
-            xhr.onreadystatechange = () =>{
-                if (xhr.readyState === 4){
-                    
+            // Replace 'username' with an actual GitHub username
+            xhr.open("GET", "https://api.github.com/users/username");
+            xhr.send(null);
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        // Assuming you want to display the data
+                        document.getElementById('userData').innerHTML = xhr.responseText;
+                    } else {
+                        // Handle errors, such as a user not found
+                        console.error('Error fetching data: ', xhr.statusText);
+                    }
                 }
-            }
+            };
         }
-
     </script>
 </body>
 </html>

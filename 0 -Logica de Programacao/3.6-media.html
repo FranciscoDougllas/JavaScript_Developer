@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações dos Alunos</title>
+</head>
+<body>
+    <h1>Informações do Aluno</h1>  
+    
+    <div id="output">
+        <!-- <h2>nome 1</h2>
+        <p>Notas:</p>
+
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+
+        <p>Media: 3</p>
+        <p>Aprovado? Não</p> -->
+    </div>
+
+   
+
+    <script>
+        const aluno = {
+            nome: 'Nana',
+            notas: [12, 5, 7]
+        }
+
+        const output = document.getElementById('output')
+        output.innerHTML += `<h2>Aluno: ${aluno.nome}</h2>`
+        output.innerHTML += `<p>Notas:</p>`
+
+        output.innerHTML += "<ul>"
+            let soma = 0
+            for(let i = 0; i < aluno.notas.length; i++){
+                soma += aluno.notas[i]
+                output.innerHTML += `<li>${aluno.notas[i]}</li>`
+            }
+        let media = soma / soma.length
+        output.innerHTML += "</ul>"
+    </script>
+
+    <p>Abaixo temos uma Calculadora</p>
+    <div id="calculadora">
+        <p></p>
+    </div>
+    <script>
+        const calculadora = document.getElementById('calculadora')
+        for(c = 1; c <=10; c++){
+            calculadora.innerHTML += `<p>${c} x 2 = ${c * 2}</p>`
+        }    
+    </script>
+</body>
+</html>

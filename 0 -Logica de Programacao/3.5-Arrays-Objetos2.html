@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Produtos</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        table, td, th {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabela de Produtos</h1>
+    <table id="tabelaProdutos">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Estoque</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As linhas serão inseridas pelo JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const produtos = [
+                {nome: 'Maçã', preco: 2, estoque: 10},
+                {nome: 'Laranja', preco: 1.5, estoque: 8},
+                {nome: 'Pera', preco: 2.2, estoque: 12},
+                {nome: 'Banana', preco: 1, estoque: 15},
+                {nome: 'Abacaxi', preco: 3, estoque: 5},
+                {nome: 'Uva', preco: 2.5, estoque: 20},
+                {nome: 'Melancia', preco: 4, estoque: 3}
+            ];
+
+            const tabelaProdutos = document.getElementById('tabelaProdutos');
+
+            produtos.forEach(produto => {
+                tabelaProdutos.innerHTML += 
+                `<tr>
+                    <td>${produto.nome}</td> 
+                    <td>R$ ${produto.preco.toFixed(2)}</td> 
+                    <td>${produto.estoque}</td> 
+                </tr>`;
+            });
+        });
+    </script>
+</body>
+</html>

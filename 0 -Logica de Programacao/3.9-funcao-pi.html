@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="raio">Raio
+        <input type="number" name="" id="raio">
+    </label>
+
+
+    <button type="number" onclick="mostraRaio()">Calcular</button>
+
+    <br>
+    <output id="output"></output>
+
+    <script>
+        const raio = document.getElementById('raio')
+        const output = document.getElementById('output')
+
+        function mostraRaio(){
+            let raioValue = raio.value
+            const pi = Math.PI
+            let area = pi * raioValue ** 2
+
+            output.innerHTML = `A Circunferencia e ${area}`
+        }
+    </script>
+</body>
+</html>

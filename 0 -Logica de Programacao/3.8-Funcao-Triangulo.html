@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcao Area de um Triangulo</title>
+</head>
+<body>
+    <h1>Função Area de um Triangulo</h1>
+
+    <label for="base">Base
+        <input type="number" name="" id="base">
+    </label>
+
+    <label for="altua">Altura
+        <input type="number" name="" id="altura">
+    </label>
+
+    <button type="number" onclick="mostraArea()">Calcular</button>
+
+    <br>
+    <output id="output"></output>
+
+    <script>
+        const base = document.getElementById('base')
+        const altura = document.getElementById('altura')
+        const output = document.getElementById('output')
+
+        function mostraArea(){
+            let baseValue = base.value
+            let alturaValue = altura.value 
+
+            let area = (baseValue * alturaValue) / 2
+
+            output.innerHTML = `A area do triangulo de base ${baseValue} e a altura e ${alturaValue} e ${area}`
+            
+        }
+    </script>
+</body>
+</html>

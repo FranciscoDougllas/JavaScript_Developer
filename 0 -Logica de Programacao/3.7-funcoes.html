@@ -6,45 +6,146 @@
     <title>Document</title>
 
     <style>
-        body{
-            margin: 10 auto;
+        body {
+            display: flex;
+            margin: 0 auto;
             justify-content: center;
             font-family: 'Courier New', Courier, monospace;
-            max-width: 550px;
-            border: 1px solid #000;
+            max-width: 1250px;
             text-align: center;
             align-items: center;
+            box-shadow: 0 20px 10px;
+            background: linear-gradient(90deg, #403f3f, #c3c3c3,#c3c3c3, #403f3f);
         }
 
+        #container {
+            width: 100%;
+            margin: 20px;
+            border: 3px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            color: #000;
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+                rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+                rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
+                rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+                rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+                rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+                rgba(0, 0, 0, 0.09) 0px 16px 8px,
+                rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            background: linear-gradient(90deg, #adadad, #c3c3c3, #d9d9d9);
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px;
+            font-size: 1.2rem;
+        }
+
+        button:hover {
+            transition: all 0.5s;
+            background-color: rgb(90, 174, 209);
+        }
+
+        .operation {
+            width: 170px;
+            color: #000;
+            font-size: 1.2rem;
+            text-align: center;
+            background: linear-gradient(90deg, #787878, #989898, #787878);
+            margin-top: 10px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+        .operation > p{
+            padding: 10px;
+            margin: 0;
+            color: #fff;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #b8a080, #8b7557, #8b7557, #b8a080);
+        }
+
+        input {
+            width: 85%;
+            height: 30px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+        }
+
+        h1 {
+            border-radius: 10px;
+            background-color: #333;
+            padding: 10px;
+            color: #fff;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        #output{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        #output > div{
+            margin: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 10px;
+            justify-content: center;
+            background-color: #333;
+        }
     </style>
 
 </head>
 <body>
-    <h1>Funções em JavaScript</h1>
 
-    <input type="number" id="number" placeholder="Digite um numero"><br>
-    <button onclick="mostrarTabuada()">Mostrar Tabuada</button>
-    <button onclick="limparTabuada()">Limpar Tabuada</button>
+    <div id="container">
+        <h1>Tabuada Moderna</h1>
 
-    <div id="output"></div>
+        <input type="number" id="number" placeholder="Digite um número"><br>
+        <button id="mostrar-tabuada">Mostrar Tabuada</button>
+        <button id="limpar-tabuada">Limpar Tabuada</button>
+
+        <div id="output">
+            <div id="soma"          class="operation"><p>Adição</p></div>
+            <div id="subtrair"      class="operation"><p>Subtração</p></div>
+            <div id="dividir"       class="operation"><p>Divisão</p></div>
+            <div id="multiplica"    class="operation"><p>Multiplicação</p></div>
+            <div id="resto-divisao" class="operation"><p>Resto Divisão</p></div>
+        </div>
+    </div>
 
     <script>
         const input = document.getElementById('number');
         const output = document.getElementById('output');
+        const mostrarTabuadaBtn = document.getElementById('mostrar-tabuada');
+        const limparTabuadaBtn = document.getElementById('limpar-tabuada');
+
+        mostrarTabuadaBtn.addEventListener('click', mostrarTabuada);
+        limparTabuadaBtn.addEventListener('click', limparTabuada);
 
         function mostrarTabuada() {
-            let tabuadaHTML = "";
             const inputValue = parseInt(input.value);
 
             for (let i = 1; i <= 10; i++) {
-                tabuadaHTML += `${inputValue}  x ${i}  = ${i * inputValue} <br>`;
+                document.getElementById('multiplica').innerHTML += `${inputValue} x ${i} = ${i * inputValue} <br>`;
+                document.getElementById('soma').innerHTML += `<b>${inputValue} + ${i} = ${i + inputValue} </b><br>`;
+                document.getElementById('subtrair').innerHTML += `<b>${inputValue} - ${i} = ${ inputValue - i } </b><br>`;
+                document.getElementById('dividir').innerHTML += `<b>${inputValue} / ${i} = ${(inputValue/i).toFixed(2)} </b><br>`;
+                document.getElementById('resto-divisao').innerHTML += `${inputValue} % ${i} = ${inputValue % i}</b><br>`;
             }
-
-            output.innerHTML = tabuadaHTML;
         }
 
-        function limparTabuada(){
-            output.innerHTML = "";
+        function limparTabuada() {
+            const operations = document.getElementsByClassName('operation');
+
+            for (let i = 0; i < operations.length; i++) {
+                operations[i].innerHTML = `<p>${operations[i].id.replace('-', ' ')}</p>`;
+            }
         }
     </script>
 </body>

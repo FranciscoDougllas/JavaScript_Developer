@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window</title>
+</head>
+<body>
+    <p class="parag">window</p>
+    <h1>Titulo Maior Importancia</h1>
+    <script>
+        console.log(window);
+        //window e o objeto global do browser
+        //possui diferentes metodos e propriedades
+
+        window.innerHeight //Define a altura do browser
+
+        window.alert('Diz oi')
+        window.alert('Ta todo Mundo Doida');
+
+        document.querySelector('h1').innerText = 'Novo Titulo'
+
+        //Exemplos
+        const titulo = document.querySelector('h1')
+
+        titulo.innerText; //Retorna o texto
+        titulo.classList; //Retorna as classes
+        titulo.id; //Retorna o Id
+        titulo.offsetHeight; //Retorna a Altura do Elemento
+
+        titulo.addEventListener("click", callback)
+        //Ativa a função callback ao click no titulo
+
+        const paragraph = document.getElementById("parag");
+        paragraph.addEventListener('click', function(){
+            paragraph = 'Novo Titulo da Pagina';
+        })
+    </script>
+</body>
+</html>

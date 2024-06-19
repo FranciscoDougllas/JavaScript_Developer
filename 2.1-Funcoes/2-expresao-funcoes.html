@@ -17,6 +17,7 @@
         console.log(media(6, 7, 8))
 
 
+
         //Função Seta aerrow function
         //Mais utilizadas no DOM
         //Domine essa forma pois e a melhor de todas
@@ -25,6 +26,15 @@
             return mediaN;
         }
         console.log(med(6, 7, 8))
+
+
+        //Mais uma forma quando não sei o total
+        const eMedia = (...args) => {
+            let media = args.reduce((acc, cur) => acc + cur, 0) / args.length;
+            return media;
+        }
+
+        document.write(eMedia(4, 5, 6, 7, 8, 9));
 
 
         //MElhorando
